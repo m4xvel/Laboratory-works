@@ -1,0 +1,5 @@
+function result() {
+    var str = document.getElementById("text").value;
+    regexp = /(\b(\d|\d\d|1\d\d|2[0,4]\d|25[0,5])(\.\d|\.\d\d|\.1\d\d|\.2[0,4]\d|\.25[0,5]){3}\b)|(\b(\d|\d\d|\d\d\d|\d\d\d\d|[A-F]|[A-F]\d|[A-F]\d\d|[A-F]\d\d\d|\d[A-F]|\d[A-F]\d|\d[A-F]\d\d|\d\d[A-F]|\d\d[A-F]\d|\d\d\d[A-F]|[A-F][A-F]|[A-F][A-F]\d|[A-F][A-F]\d\d|[A-F]\d[A-F]|[A-F]\d[A-F]\d|[A-F]\d\d[A-F]|\d[A-F][A-F]|\d[A-F][A-F]\d|\d[A-F]\d[A-F]|\d\d[A-F][A-F]|[A-F][A-F][A-F]\d|[A-F]\d[A-F][A-F]|[A-F][A-F]\d[A-F]|[A-F][A-F][A-F]\d|\d[A-F][A-F][A-F]|[A-F][A-F][A-F][A-F])(\:\d|\:\d\d|\:\d\d\d|\:\d\d\d\d|\:[A-F]|\:[A-F]\d|\:[A-F]\d\d|\:[A-F]\d\d\d|\:\d[A-F]|\:\d[A-F]\d|\:\d[A-F]\d\d|\:\d\d[A-F]|\:\d\d[A-F]\d|\:\d\d\d[A-F]|\:[A-F][A-F]|\:[A-F][A-F]\d|\:[A-F][A-F]\d\d|\:[A-F]\d[A-F]|\:[A-F]\d[A-F]\d|\:[A-F]\d\d[A-F]|\:\d[A-F][A-F]|\:\d[A-F][A-F]\d|\:\d[A-F]\d[A-F]|\:\d\d[A-F][A-F]|\:[A-F][A-F][A-F]\d|\:[A-F]\d[A-F][A-F]|\:[A-F][A-F]\d[A-F]|\:[A-F][A-F][A-F]\d|\:\d[A-F][A-F][A-F]|\:[A-F][A-F][A-F][A-F]){7}\b)/gi;
+    document.writeln(str.match(regexp));
+}
