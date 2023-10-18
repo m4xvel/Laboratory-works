@@ -1,10 +1,9 @@
 function Object(param1, param2) {
     this.param1 = param1;
-    this.param2 = param2
+    this.param2 = param2;
 }
 
 function createObject() {
-
     var people = [
         new Object("Максим", 19),
         new Object("Анатолий", 18),
@@ -30,13 +29,27 @@ function createObject() {
     ]
 }
 
-var array = createObject();
+var array = new createObject();
+
+var brCount = 0;
 
 for (var i = 0; i < array.length; i++) {
     var currentArray = array[i];
     for (var j = 0; j < currentArray.length; j++) {
         var arrayObject = currentArray[j];
-        document.writeln(`${arrayObject.param1} : ${arrayObject.param2} <br><br>`);
+        if (i === 0) {
+            document.writeln(`Имя: ${arrayObject.param1}, возраст: ${arrayObject.param2} <br><br>`);
+        } else if (i === 1) {
+            document.writeln(`Название машины: "${arrayObject.param1}", дата выпуска: ${arrayObject.param2} <br><br>`);
+        } else if (i === 2) {
+            document.writeln(`Название книги: "${arrayObject.param1}", дата выхода: ${arrayObject.param2} <br><br>`);
+        }
+        brCount++;
+        if (brCount === 3) {
+            document.writeln("<br>");
+            brCount = 0;
+        }
     }
 }
+
 
